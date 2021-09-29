@@ -87,7 +87,11 @@
     color: steelblue;
 }
 
-.orderAddress{
+.expandedComponents{
     border-bottom: 1px solid black;
     padding: 10px;
+}
+
+.orderItemsCell.active {
+    border-left: 1px solid black;
 }

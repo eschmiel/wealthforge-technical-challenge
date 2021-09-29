@@ -8,7 +8,7 @@ type OrderAddressProps = {
 export default function OrderAddress({ address }: OrderAddressProps) {
 
     return (
-        <div className='orderAddress'>
+        <div className='expandedComponents'>Address
             <div>Street: {address.street}</div>
             <div>City: {address.city}</div>
             <div>State: {address.state}</div>

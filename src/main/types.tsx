@@ -9,7 +9,7 @@ export type OrderData = {
     customer_address: Address,
     order_amount: string,
     order_date: string,
-    order_items: OrderItem[] 
+    order_items: OrderItemData[] 
 };
 
 export type Address = {
@@ -19,7 +19,7 @@ export type Address = {
     zip: string
 };
 
-export type OrderItem = {
+export type OrderItemData = {
     id: string,
     name: string,
     description: string,
