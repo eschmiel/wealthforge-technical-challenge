@@ -3,14 +3,14 @@ import React from 'react';
 export default function OrderTableLabels() {
 	return (
 		<div id='orderTableLabels'>
-			<div className='idNumberField'>Order Id</div>
-			<div className='idNumberField'>Customer Id</div>
-			<div className='nameField'>First Name</div>
-			<div className='nameField'>Last Name</div>
-			<div className='addressField'>Address</div>
-			<div className='amountField'>Order Amount</div>
-			<div className='dateField'>Order Date</div>
-			<div className='orderItemsField'>Order Items</div>
+			<div className='idNumberCell label'>Order Id</div>
+			<div className='idNumberCell label'>Customer Id</div>
+			<div className='nameCell label'>First Name</div>
+			<div className='nameCell label'>Last Name</div>
+			<div className='addressCell label'>Address</div>
+			<div className='amountCell label'>Amount</div>
+			<div className='dateCell label'>Order Date</div>
+			<div className='orderItemsCell label'>Items</div>
 		</div>
 	);
 }

@@ -11,14 +11,14 @@ export default function order ({ orderData }: OrderProps) {
 
 	return (
 		<div className='order'>
-			<div className='idNumber'>{orderData.order_id}</div>
-			<div className='idNumber'>{orderData.customer_id}</div>
-			<div className='name'>{orderData.customer_first_name}</div>
-			<div className='name'>{orderData.customer_last_name}</div>
-			<div>Address</div> {/*create Address component*/}
-			<div className='amount'>{orderData.order_amount}</div>
-			<div className='date'>{orderData.order_date}</div> {/* parse date */}
-			<div>{numberOfOrderItems}</div> {/*create order item component*/}
+			<div className='idNumberCell field'>{orderData.order_id}</div>
+			<div className='idNumberCell field'>{orderData.customer_id}</div>
+			<div className='nameCell field'>{orderData.customer_first_name}</div>
+			<div className='nameCell field'>{orderData.customer_last_name}</div>
+			<div className='addressCell field'>{'Address'}</div> {/*create Address component*/}
+			<div className='amountCell field' style={{ marginLeft: '-4px' }}>{orderData.order_amount}</div>
+			<div className='dateCell field'>{orderData.order_date}</div> {/* parse date */}
+			<div className='orderItemsCell field' style={{marginLeft: '-5px'}}>{numberOfOrderItems + ' v'}</div> {/*create order item component*/}
 		</div>
 	);
 }
