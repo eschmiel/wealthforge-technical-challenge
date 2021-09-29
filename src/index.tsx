@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Order from './main/order';
+import OrderTable from './main/orderTable';
 import testData from './data.json';
 import { OrderData } from './main/types';
 import reportWebVitals from './reportWebVitals';
@@ -10,7 +10,7 @@ let testData1: OrderData = testData[0];
 
 ReactDOM.render(
     <React.StrictMode>
-        <Order orderData={testData1}/>
+        <OrderTable />
   </React.StrictMode>,
   document.getElementById('root')
 );
