@@ -24,7 +24,7 @@ export default function Order ({ orderData }: OrderProps) {
 		orderItemsFieldClasses += ' active';
 
 	let orderItemComponents: JSX.Element[] = [];
-	orderData.order_items.forEach((currentItem) => orderItemComponents.push(<OrderItem item={currentItem} />));
+	orderData.order_items.forEach((currentItem, index) => orderItemComponents.push(<OrderItem item={currentItem} key={index} />));
 
 
 	function toggleAddress() {
@@ -43,9 +43,9 @@ export default function Order ({ orderData }: OrderProps) {
 			<div className='nameCell field'>{orderData.customer_first_name}</div>
 			<div className='nameCell field'>{orderData.customer_last_name}</div>
 			<div className={addressFieldClasses}  onClick={toggleAddress}>{'Address'}</div>
-			<div className='amountCell field' style={{ marginLeft: '-4px' }}>${orderData.order_amount}</div>
+			<div className='amountCell field'>${orderData.order_amount}</div>
 			<div className='dateCell field'>{orderData.order_date}</div>
-			<div className={orderItemsFieldClasses} style={{ marginLeft: '-5px' }} onClick={toggleItems}>{numberOfOrderItems}</div>
+			<div className={orderItemsFieldClasses} onClick={toggleItems}>{numberOfOrderItems}</div>
 			{addressActive && <OrderAddress address={orderData.customer_address} />}
 			{itemsActive && orderItemComponents}
 		</div>
