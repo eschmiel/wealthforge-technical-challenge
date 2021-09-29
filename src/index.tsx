@@ -3,14 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import OrderTable from './main/orderTable';
 import testData from './data.json';
-import { OrderData } from './main/types';
 import reportWebVitals from './reportWebVitals';
-
-let testData1: OrderData = testData[0];
 
 ReactDOM.render(
     <React.StrictMode>
-        <OrderTable />
+        <OrderTable orders={testData} />
   </React.StrictMode>,
   document.getElementById('root')
 );
