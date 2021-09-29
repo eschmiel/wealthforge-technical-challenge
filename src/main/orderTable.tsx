@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import OrderTableLabels from './orderTableLabels';
 import Order from './order';
-import './orderTable.css';
-
-import testData from '../data.json';
 import { OrderData } from './types';
+import './orderTable.css';
 
 type OrderTableProps = {
     orders: OrderData[];
