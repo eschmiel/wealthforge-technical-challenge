@@ -12,14 +12,14 @@ export type OrderData = {
     order_items: OrderItem[] 
 };
 
-type Address = {
+export type Address = {
     street: string,
     city: string,
     state: string,
     zip: string
 };
 
-type OrderItem = {
+export type OrderItem = {
     id: string,
     name: string,
     description: string,

@@ -19,15 +19,14 @@ export default function OrderTable({ orders }: OrderTableProps) {
         let orderPage: JSX.Element[] = [];
         let countLimit = 0;
         let countStart = (pageNumber - 1) * maxPageEntries; //This should provide the array index of the first order for the current page. 
-                                                //i.e. countStart is 0 on page 1, 10 on page 2, 20 on page 3
 
         if (orders.length > pageNumber * maxPageEntries)
-            countLimit = pageNumber * maxPageEntries; //10 entries per page
+            countLimit = pageNumber * maxPageEntries;
         else countLimit = orders.length;
 
 
         for (countStart; countStart < countLimit; countStart++) {
-            orderPage.push(<Order orderData={orders[countStart]} />);
+            orderPage.push(<Order orderData={orders[countStart]} key={countStart} />);
         }
 
         return orderPage;
